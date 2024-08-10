@@ -237,4 +237,8 @@ footer .copyright {
     .banner {
         margin: 20px;
     }
+    .payment-methods {
+        padding: 20px;
+        margin: 20px;
+    }
 }
