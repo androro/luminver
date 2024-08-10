@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Quicksand:wght@300..700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #175E14;
+    color: #fff;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Kurale', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: left; /* Aligns the text to the left */
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #175E14;
+    padding: 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.game-card {
+    text-align: center;
+    background-color: #167812;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.none {
+    text-decoration: none; /* Removes underline from links */
+    color: #fff; /* Ensures text is white */
+    display: block; /* Ensures the whole card is clickable */
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game-card p {
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.game-card .status {
+    background-color: #ff4d4d;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px; /* Smaller font size */
+}
+
+.flashinfo-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #ffffff   ;
+    border-radius: 25px;
+}
+
+.logo-flash {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.flashinfo {
+    font-size: 18px;
+}
+
+
+.banner {
+    text-align: center;
+    margin: 30px;
+    margin-left: 260px;
+    margin-right: 260px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #167812;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner img {
+    width: 100%; /* Sesuaikan lebar gambar dengan lebar banner */
+    max-width: 100%;
+    height: fit-content; /* Biarkan tinggi gambar menyesuaikan proporsi */
+    transition: transform 1s ease-in-out; /* Efek transisi ketika gambar berubah */
+}
+
+.payment-methods {
+    background-color: #167812;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 960px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.payment-methods h1 {
+    color: #ffffff;
+}
+
+.payment-methods p {
+    color: #ffffff;
+}
+
+.payment-logos {
+    display: flex;
+    width: max-content;
+    animation: scroll 10s linear infinite;
+}
+
+.payment-logos img {
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    max-height: 50px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+footer {
+    background-color: #1e4620;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between contact and social media */
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-container div {
+    margin: 10px;
+}
+
+footer .contact-us {
+    text-align: left;
+    flex: 1; /* Allows this section to take up available space */
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: flex-end; /* Align logos to the right */
+    flex: 1; /* Allows this section to take up available space */
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+footer .social-media img {
+    max-width: 40px; /* Set the maximum width of the logos */
+    max-height: 40px; /* Set the maximum height of the logos */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+footer .contact-us a,
+footer .site-map a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+@media (max-width: 600px) {
+    .game-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 10px;
+    }
+    .game-grid {
+        margin: 20px;
+    }
+    .banner {
+        margin: 20px;
+    }
+}
