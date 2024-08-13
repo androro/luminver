@@ -173,20 +173,21 @@
   <script src="../script.js"></script>
   <script>
     document.getElementById('pesanSekarang').addEventListener('click', function() {
-        const selectedItem = document.querySelector('.selected');
-        const userId = document.getElementById('userId').value;
-        
-        if (!selectedItem || !userId) {
-            alert("Harap isi User ID dan pilih item.");
-            return;
-        }
+    const selectedItem = document.querySelector('.selected');
+    const userId = document.getElementById('userId').value;
+    const zoneId = document.getElementById('zoneId').value;
     
-        const itemName = selectedItem.innerText.split('\n')[0];
-        const itemPrice = selectedItem.innerText.split('\n')[1];
-        const waMessage = `˖ ࣪ ‹. Halo LuminVer, saya ingin order item berikut .› ࣪˖\nNama Game: Mobile Legends\nItem: ${itemName}\nHarga: ${itemPrice}\nUser ID: ${userId}\nZone ID: ${zoneId}`;
-    
-        const waUrl = `https://wa.me/62881010100174?text=${encodeURIComponent(waMessage)}`;
-        window.open(waUrl, '_blank');
-    });
+    if (!selectedItem || !userId || !zoneId) {
+        alert("Harap isi User ID, Zone ID, dan pilih item.");
+        return;
+    }
+
+    const itemName = selectedItem.innerText.split('\n')[0];
+    const itemPrice = selectedItem.innerText.split('\n')[1];
+    const waMessage = `˖ ࣪ ‹. Hallo saya ingin order item berikut .› ࣪˖\nNama Game: Mobile Legends\nItem: ${itemName}\nHarga: ${itemPrice}\nUser ID: ${userId}\nZone ID: ${zoneId}`;
+
+    const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(waMessage)}`;
+    window.open(waUrl, '_blank');
+});
   </script>
   </html>    
