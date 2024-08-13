@@ -22,19 +22,3 @@ function selectOption(element) {
 }
 
 //tombol pesan
-document.getElementById('pesanSekarang').addEventListener('click', function() {
-    const selectedItem = document.querySelector('.selected');
-    const userId = document.getElementById('userId').value;
-    
-    if (!selectedItem || !userId) {
-        alert("Harap isi User ID dan pilih item.");
-        return;
-    }
-
-    const itemName = selectedItem.innerText.split('\n')[0];
-    const itemPrice = selectedItem.innerText.split('\n')[1];
-    const waMessage = `˖ ࣪ ‹. Halo LuminVer, saya ingin order item berikut .› ࣪˖\nNama Game: Free Fire\nItem: ${itemName}\nHarga: ${itemPrice}\nUser ID: ${userId}`;
-
-    const waUrl = `https://wa.me/62881010100174?text=${encodeURIComponent(waMessage)}`;
-    window.open(waUrl, '_blank');
-});
