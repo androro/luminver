@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../assets/luminverlogo.png">
+    <title>inDrive - LuminVer</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- color of address bar in mobile browser -->
+    <meta name="theme-color" content="#175E14" />
+    <meta name="color-scheme" content="light" />
+    <!-- Primary Meta Tags -->
+    <meta name="keywords" content="LuminVer" />
+    <meta name="author" content="LuminVer" />
+    <meta name="title" content="LuminVer"/>
+    <meta name="description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://luminver.vercel.app" />
+    <meta property="og:author" content="LuminVer" />
+    <meta property="og:title" content="LuminVer" />
+    <meta property="og:description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
+    <meta property="og:image" content="../assets/promotion.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://luminver.vercel.app" />
+    <meta property="twitter:title" content="LuminVer" />
+    <meta property="twitter:description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
+    <meta property="twitter:image" content="../assets/promotion.png" />
+</head>
+<style>
+    .banner_game {
+        background-image: url('../assets/indrivebanner.png');
+    }
+</style>
+<header>
+  <div class="logo">
+  <a href="../index.html" class="logo">
+      <img src="../assets/luminver_logo.png" alt="LuminVer">
+  </a>
+</div>
+<div class="flashinfo-container" onmouseover="stopMoving()" onmouseout="startMoving()">
+  <img src="../assets/megaphone.svg" alt="Flash Logo" class="logo-flash">
+  <marquee behavior="scroll" direction="left" class="flashinfo" id="flashinfo">✏️ Hati - hati atas penipuan yang mengatasnamakan LuminVer. Akun yang dimiliki LuminVer hanya yang ada di bagian paling bawah website ini.</span></marquee>
+</div>
+<div class="nav">
+<nav class="nav">
+  <a href="../index.html"><img src="../assets/home.svg" alt="Home"></a>
+</nav>
+</div>
+</header>
+<body>
+    <div class="banner_game">
+        inDrive
+    </div>
+    <div class="rules">
+        &#8227; Proses 5 - 15 menit <br>&#8227; Pengiriman via BRI Virtual Account
+    </div>
+    <div class="container">
+        <!-- Section 1: Masukkan ID -->
+        <div class="label">
+            <div class="label-number">1</div>
+            <div>Masukkan Nomor BRI VA</div>
+        </div>
+        <input type="number" class="input-box" id="userId" placeholder="Nomor BRI VA">
+    
+        <!-- Section 2: Pilih Nominal Top Up -->
+        <div class="label">
+            <div class="label-number">2</div>
+            <div>Pilih Nominal Top Up</div>
+        </div>
+        <div class="top-up">
+            <div onclick="selectOption(this)">inDrive 35.000<br>Rp 38.500</div>
+            <div onclick="selectOption(this)">inDrive 45.000<br>Rp 48.500</div>
+            <div onclick="selectOption(this)">inDrive 50.000<br>Rp 53.500</div>
+            <div onclick="selectOption(this)">inDrive 55.000<br>Rp 38.500</div>
+            <div onclick="selectOption(this)">inDrive 60.000<br>Rp 63.500</div>
+            <div onclick="selectOption(this)">inDrive 65.000<br>Rp 68.500</div>
+            <div onclick="selectOption(this)">inDrive 70.000<br>Rp 73.500</div>
+            <div onclick="selectOption(this)">inDrive 75.000<br>Rp 78.500</div>
+            <div onclick="selectOption(this)">inDrive 80.000<br>Rp 84.000</div>
+            <div onclick="selectOption(this)">inDrive 85.000<br>Rp 89.000</div>
+            <div onclick="selectOption(this)">inDrive 90.000<br>Rp 94.000</div>
+            <div onclick="selectOption(this)">inDrive 100.000<br>Rp 104.000</div>
+            <div onclick="selectOption(this)">inDrive 125.000<br>Rp 129.500</div>
+            <div onclick="selectOption(this)">inDrive 150.000<br>Rp 154.500</div>
+            <div onclick="selectOption(this)">inDrive 175.000<br>Rp 179.500</div>
+            <div onclick="selectOption(this)">inDrive 200.000<br>Rp 205.000</div>
+        </div>
+        <a href="#" class="button" id="pesanSekarang"><b>Pesan Sekarang</b></a>
+    </div>
+    <div class="payment-methods">
+        <h1>Metode Pembayaran</h1>
+        <p>Hingga saat ini pembayaran kami hanya menerima e-wallet dibawah ini menggunakan fitur "Kirim Uang".</p>
+        <div class="payment-logos">
+            <img src="../assets/ovopay.png" alt="OVO">
+            <img src="../assets/danapay.png" alt="Dana">
+            <img src="../assets/shopee_pay.png" alt="Shopeepay">
+            <img src="../assets/go_pay.png" alt="Gopay">
+            <img src="../assets/ovopay.png" alt="OVO">
+            <img src="../assets/danapay.png" alt="Dana">
+            <img src="../assets/shopee_pay.png" alt="Shopeepay">
+            <img src="../assets/go_pay.png" alt="Gopay">
+            <img src="../assets/ovopay.png" alt="OVO">
+            <img src="../assets/danapay.png" alt="Dana">
+            <img src="../assets/shopee_pay.png" alt="Shopeepay">
+            <img src="../assets/go_pay.png" alt="Gopay">
+        </div>
+    </div>
+  </body>
+  <footer>
+    <div class="footer-container">
+        <div class="contact-us">
+            <h3>Kontak Kami</h3>
+            <a href="https://api.whatsapp.com/send?phone=6281383950505" target="_blank">WhatsApp Admin 1</a>
+            <a href="https://api.whatsapp.com/send?phone=62881010100174" target="_blank">WhatsApp Admin 2</a>
+            <a href="https://t.me/dronnstr" target="_blank">Telegram</a>
+        </div>
+        <div class="social-media">
+          <a href="https://whatsapp.com/channel/0029VaGoiJfB4hdQhux4pm0p" target="_blank"><img src="../assets/whatsapp.svg" alt="WhatsApp Logo"></a>
+          <a href="https://t.me/+fmdLHovhTpEwZjU1" target="_blank"><img src="../assets/telegram.svg" alt="Facebook Logo"></a>
+          <a href="https://instagram.com/luminver" target="_blank"><img src="../assets/instagram.svg" alt="Instagram Logo"></a>
+      </div>
+      
+    </div>
+    <div class="copyright">
+        &copy; 2024 LUMIN VERTIKAL ABADI
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+  <script>
+         document.getElementById('pesanSekarang').addEventListener('click', function() {
+    const selectedItem = document.querySelector('.selected');
+    const userId = document.getElementById('userId').value;
+    
+    if (!selectedItem || !userId) {
+        alert("Harap isi Nomor Handphone dan pilih nominal pulsa.");
+        return;
+    }
+
+    const itemName = selectedItem.innerText.split('\n')[0];
+    const itemPrice = selectedItem.innerText.split('\n')[1];
+    const waMessage = `˖ ࣪ ‹. Halo LuminVer, saya ingin order item berikut .› ࣪˖\nNama Produk: Convert inDrive\nNominal: ${itemName}\nHarga: ${itemPrice}\nID inDrive: ${userId}`;
+
+    const waUrl = `https://wa.me/62881010100174?text=${encodeURIComponent(waMessage)}`;
+    window.open(waUrl, '_blank');
+});
+  </script>
+  </html>    
