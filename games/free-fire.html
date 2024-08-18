@@ -17,18 +17,18 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://luminver.vercel.app" />
+    <meta property="og:url" content="https://luminver.my.id" />
     <meta property="og:author" content="LuminVer" />
     <meta property="og:title" content="LuminVer" />
     <meta property="og:description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
-    <meta property="og:image" content="https://luminver.vercel.app/assets/promotion.png" />
+    <meta property="og:image" content="https://luminver.my.id/assets/promotion.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://luminver.vercel.app" />
+    <meta property="twitter:url" content="https://luminver.my.id" />
     <meta property="twitter:title" content="LuminVer" />
     <meta property="twitter:description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
-    <meta property="twitter:image" content="https://luminver.vercel.app/assets/promotion.png" />
+    <meta property="twitter:image" content="https://luminver.my.id/assets/promotion.png" />
 </head>
 <style>
     .banner_game {
@@ -99,6 +99,26 @@
         <div class="top-up">
             <div onclick="selectOption(this)">Level Up Pass<br>Rp 14.500</div>
         </div>
+        <!-- Section 3: Pilih Metode Pembayaran -->
+        <div class="label">
+            <div class="label-number">3</div>
+            <div>Pilih Metode Pembayaran</div>
+        </div>
+
+        <div class="payment">
+            <div onclick="selectPayment(this, 'OVO')">
+                <img src="../assets/ovopay.png" alt="OVO">
+            </div>
+            <div onclick="selectPayment(this, 'Gopay')">
+                <img src="../assets/go_pay.png" alt="Gopay">
+            </div>
+            <div onclick="selectPayment(this, 'Dana')">
+                <img src="../assets/danapay.png" alt="Dana">
+            </div>
+            <div onclick="selectPayment(this, 'ShopeePay')">
+                <img src="../assets/shopee_pay.png" alt="ShopeePay">
+            </div>
+        </div>
         <a href="#" class="button" id="pesanSekarang"><b>Pesan Sekarang</b></a>
     </div>
     <div class="payment-methods">
@@ -141,22 +161,21 @@
   </footer>
   <script src="../script.js"></script>
     <script>
-        document.getElementById('pesanSekarang').addEventListener('click', function() {
-    const selectedItem = document.querySelector('.selected');
+       document.getElementById('pesanSekarang').addEventListener('click', function() {
+    const selectedItem = document.querySelector('.selected:not(.payment-methods div)');
     const userId = document.getElementById('userId').value;
-    
-    if (!selectedItem || !userId) {
-        alert("Harap isi User ID dan pilih item.");
+
+    if (!selectedItem || !userId || !selectedPayment) {
+        alert("Harap isi User ID, pilih item, dan metode pembayaran.");
         return;
     }
 
     const itemName = selectedItem.innerText.split('\n')[0];
     const itemPrice = selectedItem.innerText.split('\n')[1];
-    const waMessage = `˖ ࣪ ‹. Halo LuminVer, saya ingin order item berikut .› ࣪˖\nNama Game: Free Fire\nItem: ${itemName}\nHarga: ${itemPrice}\nUser ID: ${userId}`;
+    const waMessage = `˖ ࣪ ‹. Halo Luminver, saya ingin order item berikut .› ࣪˖\nNama Game: Free Fire\nItem: ${itemName}\nHarga: ${itemPrice}\nUser ID: ${userId}\nPembayaran: ${selectedPayment}\n\n ⚠️ Jangan ubah format teks!`;
 
-    const waUrl = `https://wa.me/62881010100174?text=${encodeURIComponent(waMessage)}`;
+    const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(waMessage)}`;
     window.open(waUrl, '_blank');
-});
-        
+});   
     </script>
   </html>    
