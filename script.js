@@ -21,4 +21,17 @@ function selectOption(element) {
     element.classList.add('selected');
 }
 
+function selectPayment(element, paymentMethod) {
+    // Remove selected class from all payment options
+    const allPayments = document.querySelectorAll('.payment div');
+    allPayments.forEach(payment => {
+        payment.classList.remove('selected');
+    });
+
+    // Add selected class to the clicked payment option
+    element.classList.add('selected');
+
+    // Store selected payment method
+    selectedPayment = paymentMethod;
+}
 //tombol pesan
