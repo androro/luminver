@@ -75,6 +75,27 @@
             <div onclick="selectOption(this)">1 Bulan (2 User)<br>Rp 26.000</div>
             <div onclick="selectOption(this)">1 Bulan (1 User)<br>Rp 36.000</div>
         </div>
+        
+    <!-- Section 3: Pilih Metode Pembayaran -->
+    <div class="label">
+        <div class="label-number">3</div>
+        <div>Pilih Metode Pembayaran</div>
+    </div>
+
+    <div class="payment">
+        <div onclick="selectPayment(this, 'OVO')">
+            <img src="../assets/ovopay.png" alt="OVO">
+        </div>
+        <div onclick="selectPayment(this, 'Gopay')">
+            <img src="../assets/go_pay.png" alt="Gopay">
+        </div>
+        <div onclick="selectPayment(this, 'Dana')">
+            <img src="../assets/danapay.png" alt="Dana">
+        </div>
+        <div onclick="selectPayment(this, 'ShopeePay')">
+            <img src="../assets/shopee_pay.png" alt="ShopeePay">
+        </div>
+    </div>
         <a href="#" class="button" id="pesanSekarang"><b>Pesan Sekarang</b></a>
     </div>
     <div class="payment-methods">
@@ -117,17 +138,17 @@
   </footer>
   <script src="../script.js"></script>
   <script>
-         document.getElementById('pesanSekarang').addEventListener('click', function() {
-    const selectedItem = document.querySelector('.selected');
-    
-    if (!selectedItem) {
-        alert("Harap pilih Durasi.");
+        document.getElementById('pesanSekarang').addEventListener('click', function() {
+    const selectedItem = document.querySelector('.selected:not(.payment div)');
+
+    if (!selectedItem || !selectedPayment) {
+        alert("Harap pilih durasi dan metode pembayaran.");
         return;
     }
 
     const itemName = selectedItem.innerText.split('\n')[0];
     const itemPrice = selectedItem.innerText.split('\n')[1];
-    const waMessage = `˖ ࣪ ‹. Halo LuminVer, saya ingin order item berikut .› ࣪˖\nNama Produk: Netflix\nDurasi: ${itemName}\nHarga: ${itemPrice}`;
+    const waMessage = `˖ ࣪ ‹. Hallo saya ingin order item berikut .› ࣪˖\nNama Produk: Netflix\nDurasi: ${itemName}\nHarga: ${itemPrice}\nPembayaran: ${selectedPayment}`;
 
     const waUrl = `https://wa.me/62881010100174?text=${encodeURIComponent(waMessage)}`;
     window.open(waUrl, '_blank');
