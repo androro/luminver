@@ -148,7 +148,7 @@
 
     const itemName = selectedItem.innerText.split('\n')[0];
     const itemPrice = selectedItem.innerText.split('\n')[1];
-    const waMessage = `˖ ࣪ ‹. Hallo saya ingin order item berikut .› ࣪˖\nNama Produk: Netflix\nDurasi: ${itemName}\nHarga: ${itemPrice}\nPembayaran: ${selectedPayment}`;
+    const waMessage = `˖ ࣪ ‹. Hallo saya ingin order item berikut .› ࣪˖\nNama Produk: Netflix\nDurasi: ${itemName}\nHarga: ${itemPrice}\nPembayaran: ${selectedPayment}\n\n ⚠️ Jangan ubah format teks!`;
 
     const waUrl = `https://wa.me/62881010100174?text=${encodeURIComponent(waMessage)}`;
     window.open(waUrl, '_blank');
