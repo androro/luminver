@@ -17,18 +17,18 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://luminver.vercel.app" />
+    <meta property="og:url" content="https://luminver.my.id" />
     <meta property="og:author" content="LuminVer" />
     <meta property="og:title" content="LuminVer" />
     <meta property="og:description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
-    <meta property="og:image" content="../assets/promotion.png" />
+    <meta property="og:image" content="https://luminver.my.id/assets/promotion.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://luminver.vercel.app" />
+    <meta property="twitter:url" content="https://luminver.my.id" />
     <meta property="twitter:title" content="LuminVer" />
     <meta property="twitter:description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
-    <meta property="twitter:image" content="../assets/promotion.png" />
+    <meta property="twitter:image" content="https://luminver.my.id/assets/promotion.png" />
 </head>
 <style>
     .banner_game {
@@ -71,6 +71,7 @@
             <div class="label-number">2</div>
             <div>Pilih Nominal Top Up</div>
         </div>
+        <div class="section-title">Pulsa Regular</div>
         <div class="top-up">
             <div onclick="selectOption(this)">Grab Driver 10.000<br>Rp 13.500</div>
             <div onclick="selectOption(this)">Grab Driver 20.000<br>Rp 23.500</div>
@@ -79,6 +80,26 @@
             <div onclick="selectOption(this)">Grab Driver 150.000<br>Rp 155.000</div>
             <div onclick="selectOption(this)">Grab Driver 200.000<br>Rp 205.500</div>
             <div onclick="selectOption(this)">Grab Driver 250.000<br>Rp 256.000</div>
+        </div>
+        <!-- Section 3: Pilih Metode Pembayaran -->
+        <div class="label">
+            <div class="label-number">3</div>
+            <div>Pilih Metode Pembayaran</div>
+        </div>
+
+        <div class="payment">
+            <div onclick="selectPayment(this, 'OVO')">
+                <img src="../assets/ovopay.png" alt="OVO">
+            </div>
+            <div onclick="selectPayment(this, 'Gopay')">
+                <img src="../assets/go_pay.png" alt="Gopay">
+            </div>
+            <div onclick="selectPayment(this, 'Dana')">
+                <img src="../assets/danapay.png" alt="Dana">
+            </div>
+            <div onclick="selectPayment(this, 'ShopeePay')">
+                <img src="../assets/shopee_pay.png" alt="ShopeePay">
+            </div>
         </div>
         <a href="#" class="button" id="pesanSekarang"><b>Pesan Sekarang</b></a>
     </div>
@@ -122,21 +143,21 @@
   </footer>
   <script src="../script.js"></script>
   <script>
-         document.getElementById('pesanSekarang').addEventListener('click', function() {
-    const selectedItem = document.querySelector('.selected');
-    const userId = document.getElementById('userId').value;
-    
-    if (!selectedItem || !userId) {
-        alert("Harap isi Nomor Handphone dan pilih nominal pulsa.");
-        return;
-    }
+    document.getElementById('pesanSekarang').addEventListener('click', function() {
+ const selectedItem = document.querySelector('.selected:not(.payment-methods div)');
+ const userId = document.getElementById('userId').value;
 
-    const itemName = selectedItem.innerText.split('\n')[0];
-    const itemPrice = selectedItem.innerText.split('\n')[1];
-    const waMessage = `˖ ࣪ ‹. Halo LuminVer, saya ingin order item berikut .› ࣪˖\nNama Produk: Convert Grab Driver\nNominal: ${itemName}\nHarga: ${itemPrice}\nNomor Handphone: ${userId}`;
+ if (!selectedItem || !userId || !selectedPayment) {
+     alert("Harap isi Nomor Handphone, pilih nominal Top Up, dan metode pembayaran.");
+     return;
+ }
 
-    const waUrl = `https://wa.me/62881010100174?text=${encodeURIComponent(waMessage)}`;
-    window.open(waUrl, '_blank');
-});
+ const itemName = selectedItem.innerText.split('\n')[0];
+ const itemPrice = selectedItem.innerText.split('\n')[1];
+ const waMessage = `˖ ࣪ ‹. Halo Luminver, saya ingin order item berikut .› ࣪˖\nNama Produk: Convert Grab Driver\nItem: ${itemName}\nHarga: ${itemPrice}\nNomor Handphone: ${userId}\nPembayaran: ${selectedPayment}\n\n ⚠️ Jangan ubah format teks!`;
+
+ const waUrl = `https://wa.me/62881010100174?text=${encodeURIComponent(waMessage)}`;
+ window.open(waUrl, '_blank');
+});   
   </script>
   </html>    
