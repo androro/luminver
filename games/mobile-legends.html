@@ -16,18 +16,18 @@
     <meta name="description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://luminver.vercel.app" />
+    <meta property="og:url" content="https://luminver.my.id" />
     <meta property="og:author" content="LuminVer" />
     <meta property="og:title" content="LuminVer" />
     <meta property="og:description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
-    <meta property="og:image" content="https://luminver.vercel.app/assets/promotion.png" />
+    <meta property="og:image" content="https://luminver.my.id/assets/promotion.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://luminver.vercel.app" />
+    <meta property="twitter:url" content="https://luminver.my.id" />
     <meta property="twitter:title" content="LuminVer" />
     <meta property="twitter:description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
-    <meta property="twitter:image" content="https://luminver.vercel.app/assets/promotion.png" />
+    <meta property="twitter:image" content="https://luminver.my.id/assets/promotion.png" />
 </head>
 <style>
     .banner_game {
@@ -130,6 +130,26 @@
             <div onclick="selectOption(this)">💎 4588 Diamonds<br>Rp 1.120.000</div>
             <div onclick="selectOption(this)">💎 4830 Diamonds<br>Rp 1.168.500</div>
         </div>
+        <!-- Section 3: Pilih Metode Pembayaran -->
+        <div class="label">
+            <div class="label-number">2</div>
+            <div>Pilih Metode Pembayaran</div>
+        </div>
+
+        <div class="payment">
+            <div onclick="selectPayment(this, 'OVO')">
+                <img src="../assets/ovopay.png" alt="OVO">
+            </div>
+            <div onclick="selectPayment(this, 'Gopay')">
+                <img src="../assets/go_pay.png" alt="Gopay">
+            </div>
+            <div onclick="selectPayment(this, 'Dana')">
+                <img src="../assets/danapay.png" alt="Dana">
+            </div>
+            <div onclick="selectPayment(this, 'ShopeePay')">
+                <img src="../assets/shopee_pay.png" alt="ShopeePay">
+            </div>
+        </div>
         <a href="#" class="button" id="pesanSekarang"><b>Pesan Sekarang</b></a>
     </div>
     <div class="payment-methods">
@@ -172,19 +192,20 @@
   </footer>
   <script src="../script.js"></script>
   <script>
+
     document.getElementById('pesanSekarang').addEventListener('click', function() {
-    const selectedItem = document.querySelector('.selected');
+    const selectedItem = document.querySelector('.selected:not(.payment-methods div)');
     const userId = document.getElementById('userId').value;
     const zoneId = document.getElementById('zoneId').value;
     
-    if (!selectedItem || !userId || !zoneId) {
-        alert("Harap isi User ID, Zone ID, dan pilih item.");
+    if (!selectedItem || !userId || !zoneId || !selectedPayment) {
+        alert("Harap isi User ID, Zone ID, pilih item, dan metode pembayaran.");
         return;
     }
 
     const itemName = selectedItem.innerText.split('\n')[0];
     const itemPrice = selectedItem.innerText.split('\n')[1];
-    const waMessage = `˖ ࣪ ‹. Halo LuminVer, saya ingin order item berikut .› ࣪˖\nNama Game: Mobile Legends\nItem: ${itemName}\nHarga: ${itemPrice}\nUser ID: ${userId}\nZone ID: ${zoneId}`;
+    const waMessage = `˖ ࣪ ‹. Halo LuminVer, saya ingin order item berikut .› ࣪˖\nNama Game: Mobile Legends\nItem: ${itemName}\nHarga: ${itemPrice}\nUser ID: ${userId}\nZone ID: ${zoneId}\nPembayaran: ${selectedPayment}\n\n ⚠️ Jangan ubah format teks!`;
 
     const waUrl = `https://wa.me/62881010100174?text=${encodeURIComponent(waMessage)}`;
     window.open(waUrl, '_blank');
