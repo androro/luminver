@@ -464,6 +464,9 @@ input[type=number] {
     transition: all 0.3s ease;
 }
 
+.payment div:hover {
+    border-color: #167812;
+}
 .payment div.selected {
     border-color: #167812; /* Warna border setelah dipilih */
     border-width: 3px; /* Ketebalan border setelah dipilih */
