@@ -301,7 +301,7 @@ footer .copyright {
 .container {
     max-width: 800px;
     margin: 50px auto;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Nunito', sans-serif;
     padding: 20px;
 }
 
@@ -329,7 +329,7 @@ footer .copyright {
 }
 
 .input-box {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Nunito', sans-serif;
     width: calc(50% - 10px);
     color: white;
     font-size: 15px;
