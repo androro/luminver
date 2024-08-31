@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: #175E14;
     color: #fff;
     margin: 0;
 }
 
 h1 {
-    font-family: 'Kurale', sans-serif;
+    font-family: 'Kurale', serif;
     font-size: 36px;
     margin-bottom: 20px;
     text-align: left; /* Aligns the text to the left */
