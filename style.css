@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Quicksand:wght@300..700&display=swap');
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     background-color: #175E14;
     color: #fff;
     margin: 0;
 }
 
 h1 {
-    font-family: 'Kurale', serif;
+    font-family: 'Kurale', sans-serif;
     font-size: 36px;
     margin-bottom: 20px;
-    text-align: left; /* Aligns the text to the left */
+    text-align: left;
     padding: 20px;
 }
 
@@ -109,11 +109,11 @@ header {
 }
 
 
-.banner {
-    text-align: center;
-    margin: 30px;
-    margin-left: 260px;
-    margin-right: 260px;
+.slider {
+    width: 1280px;
+    max-width: 100vw;
+    height: 420px;
+    margin: auto;
     position: relative;
     overflow: hidden;
     border: 3px solid #167812;
@@ -121,12 +121,79 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.banner img {
-    width: 100%; /* Sesuaikan lebar gambar dengan lebar banner */
-    max-width: 100%;
-    height: fit-content; /* Biarkan tinggi gambar menyesuaikan proporsi */
-    transition: transform 1s ease-in-out; /* Efek transisi ketika gambar berubah */
+.slider .list {
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
 }
+
+.slider .list img {
+    width: auto;
+    height: 100%;
+    object-fit: contain; /* Bisa diubah ke cover jika ingin gambar memenuhi area */
+    max-height: 700px;
+    max-width: 100vw;
+}
+
+.slider .buttons {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider .buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.slider .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.slider .dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.slider .dots li.active {
+    width: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        width: auto;
+        height: 131px;
+        margin: 20px;
+    }
+}
+
+
 
 .payment-methods {
     background-color: #167812;
@@ -301,7 +368,7 @@ footer .copyright {
 .container {
     max-width: 800px;
     margin: 50px auto;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     padding: 20px;
 }
 
@@ -329,7 +396,7 @@ footer .copyright {
 }
 
 .input-box {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     width: calc(50% - 10px);
     color: white;
     font-size: 15px;
@@ -467,6 +534,7 @@ input[type=number] {
 .payment div:hover {
     border-color: #167812;
 }
+
 .payment div.selected {
     border-color: #167812; /* Warna border setelah dipilih */
     border-width: 3px; /* Ketebalan border setelah dipilih */
@@ -502,9 +570,6 @@ input[type=number] {
         gap: 10px;
     }
     .game-grid {
-        margin: 20px;
-    }
-    .banner {
         margin: 20px;
     }
     .payment-methods {
