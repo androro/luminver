@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     background-color: #175E14;
     color: #fff;
     margin: 0;
+    transition: background 0.3s, color 0.3s;
 }
 
 h1 {
@@ -22,6 +23,7 @@ header {
     align-items: center;
     background-color: #175E14;
     padding: 20px;
+    transition: background 0.3s, color 0.3s;
 }
 
 .logo img {
@@ -244,6 +246,7 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+    transition: background 0.3s, color 0.3s;
 }
 
 footer .footer-container {
@@ -368,7 +371,7 @@ footer .copyright {
 .container {
     max-width: 800px;
     margin: 50px auto;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     padding: 20px;
 }
 
@@ -396,7 +399,7 @@ footer .copyright {
 }
 
 .input-box {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     width: calc(50% - 10px);
     color: white;
     font-size: 15px;
@@ -592,4 +595,34 @@ input[type=number] {
         display: block;
         width: 92%;
     }
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Mode gelap untuk header & footer */
+.dark-mode header, 
+.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Tombol toggle */
+.toggle-button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 10px;
+}
+
+.toggle-button img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.dark-mode .toggle-button img {
+    transform: rotate(180deg);
 }
