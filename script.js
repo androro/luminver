@@ -51,7 +51,7 @@ prev.onclick = function(){
     active = active - 1 >= 0 ? active - 1 : lengthItems;
     reloadSlider();
 }
-let refreshInterval = setInterval(()=> {next.click()}, 3000);
+let refreshInterval = setInterval(()=> {next.click()}, 5000);
 function reloadSlider(){
     slider.style.left = -items[active].offsetLeft + 'px';
     // 
@@ -60,9 +60,7 @@ function reloadSlider(){
     dots[active].classList.add('active');
 
     clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 3000);
-
-    
+    refreshInterval = setInterval(()=> {next.click()}, 5000);
 }
 
 dots.forEach((li, key) => {
@@ -74,6 +72,50 @@ dots.forEach((li, key) => {
 window.onresize = function(event) {
     reloadSlider();
 };
+
+function getRootPath() {
+    // Hitung jumlah '/' dalam path untuk menentukan kedalaman folder
+    let depth = window.location.pathname.split('/').length - 2;
+
+    // Jika halaman di root (index.html), path cukup "assets/"
+    return depth <= 0 ? "assets/" : "../".repeat(depth) + "assets/";
+}
+
+function toggleDarkMode() {
+    const body = document.body;
+    const icon = document.getElementById("mode-icon");
+    let rootPath = getRootPath(); // Dapatkan path yang benar untuk ikon
+
+    // Toggle kelas mode gelap
+    body.classList.toggle("dark-mode");
+
+    // Cek apakah mode gelap aktif
+    if (body.classList.contains("dark-mode")) {
+        icon.src = rootPath + "moon.svg"; // Ganti ke ikon bulan
+        icon.alt = "Mode Gelap";
+        localStorage.setItem("darkMode", "enabled"); // Simpan preferensi
+    } else {
+        icon.src = rootPath + "sun.svg"; // Ganti ke ikon matahari
+        icon.alt = "Mode Terang";
+        localStorage.setItem("darkMode", "disabled"); // Simpan preferensi
+    }
+}
+
+// Saat halaman dimuat, pastikan mode gelap langsung diterapkan
+window.onload = function () {
+    let rootPath = getRootPath(); // Tentukan path ikon berdasarkan lokasi halaman
+    let icon = document.getElementById("mode-icon");
+
+    // Jika mode gelap tersimpan di localStorage, langsung aktifkan sebelum render
+    if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode"); // Tambahkan mode gelap
+    }
+
+    // Pastikan ikon memiliki src sejak awal
+    icon.src = document.body.classList.contains("dark-mode") ? rootPath + "moon.svg" : rootPath + "sun.svg";
+    icon.alt = document.body.classList.contains("dark-mode") ? "Mode Gelap" : "Mode Terang";
+};
+
 
 
 
