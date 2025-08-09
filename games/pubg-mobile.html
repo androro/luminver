@@ -1,190 +1,191 @@
-    <!DOCTYPE html>
-    <html lang="id">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/png" href="../assets/luminverlogo.png">
-        <title>PUBG Mobile - LuminVer</title>
-        <link rel="stylesheet" href="../style.css">
-        <!-- color of address bar in mobile browser -->
-        <meta name="theme-color" content="#175E14" />
-        <meta name="color-scheme" content="light" />
-        <!-- Primary Meta Tags -->
-        <meta name="keywords" content="LuminVer" />
-        <meta name="author" content="LuminVer" />
-        <meta name="title" content="LuminVer"/>
-        <meta name="description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../assets/luminverlogo.png">
+    <title>PUBG Mobile - LuminVer</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- color of address bar in mobile browser -->
+    <meta name="theme-color" content="#175E14" />
+    <meta name="color-scheme" content="light" />
+    <!-- Primary Meta Tags -->
+    <meta name="keywords" content="LuminVer" />
+    <meta name="author" content="LuminVer" />
+    <meta name="title" content="LuminVer"/>
+    <meta name="description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
 
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://luminver.vercel.app" />
-        <meta property="og:author" content="LuminVer" />
-        <meta property="og:title" content="LuminVer" />
-        <meta property="og:description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
-        <meta property="og:image" content="https://luminver.vercel.app/assets/promotion.png" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://luminver.vercel.app" />
+    <meta property="og:author" content="LuminVer" />
+    <meta property="og:title" content="LuminVer" />
+    <meta property="og:description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
+    <meta property="og:image" content="https://luminver.vercel.app/assets/promotion.png" />
 
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://luminver.vercel.app" />
-        <meta property="twitter:title" content="LuminVer" />
-        <meta property="twitter:description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
-        <meta property="twitter:image" content="https://luminver.vercel.app/assets/promotion.png" />
-    </head>
-    <style>
-        .banner_game {
-            background-image: url('../assets/pubgbanner.jpg');
-        }
-    </style>
-    <header>
-    <div class="logo">
-    <a href="../index.html" class="logo">
-        <img src="../assets/luminver_logo.png" alt="LuminVer">
-    </a>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://luminver.vercel.app" />
+    <meta property="twitter:title" content="LuminVer" />
+    <meta property="twitter:description" content="Penuhi kebutuhan digitalmu hanya di LuminVer!" />
+    <meta property="twitter:image" content="https://luminver.vercel.app/assets/promotion.png" />
+</head>
+<style>
+    .banner_game {
+        background-image: url('../assets/pubgbanner.jpg');
+    }
+</style>
+<header>
+  <div class="logo">
+  <a href="../index.html" class="logo">
+      <img src="../assets/luminver_logo.png" alt="LuminVer">
+  </a>
+</div>
+<div class="nav">
+<nav class="nav">
+  <a href="../index.html"><img src="../assets/home.svg" alt="Home"></a>
+</nav>
+</div>
+</header>
+<body>
+    <div class="banner_game">
+        PUBG Mobile
     </div>
-    <div class="nav">
-    <nav class="nav">
-    <a href="../index.html"><img src="../assets/home.svg" alt="Home"></a>
-    </nav>
+    <div class="rules">
+        &#8227; Proses 5 - 15 menit <br>&#8227; Pengiriman via user ID
     </div>
-    </header>
-    <body>
-        <div class="banner_game">
-            PUBG Mobile
+    <div class="container">
+        <!-- Section 1: Masukkan ID -->
+        <div class="label">
+            <div class="label-number">1</div>
+            <div>Masukkan ID</div>
         </div>
-        <div class="rules">
-            &#8227; Proses 5 - 15 menit <br>&#8227; Pengiriman via user ID
+        <input type="number" class="input-box" id="userId" placeholder="User ID">
+    
+        <!-- Section 2: Pilih Nominal Top Up -->
+        <div class="label">
+            <div class="label-number">2</div>
+            <div>Pilih Nominal Top Up</div>
         </div>
-        <div class="container">
-            <!-- Section 1: Masukkan ID -->
-            <div class="label">
-                <div class="label-number">1</div>
-                <div>Masukkan ID</div>
-            </div>
-            <input type="number" class="input-box" id="userId" placeholder="User ID">
-        
-            <!-- Section 2: Pilih Nominal Top Up -->
-            <div class="label">
-                <div class="label-number">2</div>
-                <div>Pilih Nominal Top Up</div>
-            </div>
-            <div class="section-title">UC INDO</div>
-            <div class="top-up">
-                <div onclick="selectOption(this)">60 UC INDO<br>Rp 15.500</div>
-                <div onclick="selectOption(this)">325 UC INDO<br>Rp 72.000</div>
-                <div onclick="selectOption(this)">660 UC INDO<br>Rp 144.000</div>
-                <div onclick="selectOption(this)">1800 UC INDO<br>Rp 367.000</div>
-                <div onclick="selectOption(this)">3850 UC INDO<br>Rp 727.500</div>
-                <div onclick="selectOption(this)">8100 UC INDO<br>Rp 1.453.500</div>
-            </div>
-            <div class="section-title">UC GLOBAL</div>
-            <div class="top-up">
-                <div onclick="selectOption(this)">60 UC GLOBAL<br>Rp 15.500</div>
-                <div onclick="selectOption(this)">325 UC GLOBAL<br>Rp 73.500</div>
-                <div onclick="selectOption(this)">660 UC GLOBAL<br>Rp 145.500</div>
-                <div onclick="selectOption(this)">1800 UC GLOBAL<br>Rp 364.000</div>
-                <div onclick="selectOption(this)">3850 UC GLOBAL<br>Rp 726.500</div>
-                <div onclick="selectOption(this)">8100 UC GLOBAL<br>Rp 1.452.500</div>
-            </div>
-            <div class="section-title">Upgrade RP Indo</div>
-            <div class="top-up">
-                <div onclick="selectOption(this)">Paket Upgrade RP Indo<br>Rp 144.000</div>
-                <div onclick="selectOption(this)">Paket Upgrade Elite RP Indo<br>Rp 365.500</div>
-            </div>
-            <!-- Section 3: Pilih Metode Pembayaran -->
-            <div class="label">
-                <div class="label-number">3</div>
-                <div>Pilih Metode Pembayaran</div>
-            </div>
-            <div class="section-title">Kirim Uang</div>
-            <div class="payment">
-                <div onclick="selectPayment(this, 'OVO')">
-                    <img src="../assets/ovopay.png" alt="OVO">
-                </div>
-                <div onclick="selectPayment(this, 'Gopay')">
-                    <img src="../assets/go_pay.png" alt="Gopay">
-                </div>
-                <div onclick="selectPayment(this, 'Dana')">
-                    <img src="../assets/danapay.png" alt="Dana">
-                </div>
-                <div onclick="selectPayment(this, 'ShopeePay')">
-                    <img src="../assets/shopee_pay.png" alt="ShopeePay">
-                </div>
-            </div>
-            <div class="section-title">QRIS dan Transfer Bank</div>
-            <div class="payment">
-                <div onclick="selectPayment(this, 'QRIS')">
-                    <img src="../assets/qris.png" alt="QRIS">
-                </div>
-                <div onclick="selectPayment(this, 'Transfer Bank Jago')">
-                    <img src="../assets/jago.png" alt="Jago">
-                </div>
-                <div onclick="selectPayment(this, 'Transfer Bank Seabank')">
-                    <img src="../assets/seabank.png" alt="Seabank">
-                </div>
-                <div onclick="selectPayment(this, 'Transfer Bank BCA')">
-                    <img src="../assets/bca.png" alt="BCA">
-                </div>
-            <a href="#" class="button" id="pesanSekarang"><b>Pesan Sekarang</b></a>
+        <div class="section-title">UC INDO</div>
+        <div class="top-up">
+            <div onclick="selectOption(this)">60 UC INDO<br>Rp 15.500</div>
+            <div onclick="selectOption(this)">325 UC INDO<br>Rp 72.000</div>
+            <div onclick="selectOption(this)">660 UC INDO<br>Rp 144.000</div>
+            <div onclick="selectOption(this)">1800 UC INDO<br>Rp 367.000</div>
+            <div onclick="selectOption(this)">3850 UC INDO<br>Rp 727.500</div>
+            <div onclick="selectOption(this)">8100 UC INDO<br>Rp 1.453.500</div>
         </div>
-        <div class="payment-methods">
-            <h1>Metode Pembayaran</h1>
-            <p>Pembayaran yang bervariasi memudahkanmu memilih pembayaran yang sesuai.</p>
-            <div class="payment-logos">
-                <img src="../assets/qris.png" alt="QRIS">
-                <img src="../assets/danapay.png" alt="Dana">
-                <img src="../assets/shopee_pay.png" alt="Shopeepay">
-                <img src="../assets/go_pay.png" alt="Gopay">
+        <div class="section-title">UC GLOBAL</div>
+        <div class="top-up">
+            <div onclick="selectOption(this)">60 UC GLOBAL<br>Rp 15.500</div>
+            <div onclick="selectOption(this)">325 UC GLOBAL<br>Rp 73.500</div>
+            <div onclick="selectOption(this)">660 UC GLOBAL<br>Rp 145.500</div>
+            <div onclick="selectOption(this)">1800 UC GLOBAL<br>Rp 364.000</div>
+            <div onclick="selectOption(this)">3850 UC GLOBAL<br>Rp 726.500</div>
+            <div onclick="selectOption(this)">8100 UC GLOBAL<br>Rp 1.452.500</div>
+        </div>
+        <div class="section-title">Upgrade RP Indo</div>
+        <div class="top-up">
+            <div onclick="selectOption(this)">Paket Upgrade RP Indo<br>Rp 144.000</div>
+            <div onclick="selectOption(this)">Paket Upgrade Elite RP Indo<br>Rp 365.500</div>
+        </div>
+        <!-- Section 3: Pilih Metode Pembayaran -->
+        <div class="label">
+            <div class="label-number">3</div>
+            <div>Pilih Metode Pembayaran</div>
+        </div>
+        <div class="section-title">Kirim Uang</div>
+        <div class="payment">
+            <div onclick="selectPayment(this, 'OVO')">
                 <img src="../assets/ovopay.png" alt="OVO">
-                <img src="../assets/jago.png" alt="Jago">
-                <img src="../assets/seabank.png" alt="Seabank">
-                <img src="../assets/bca.png" alt="BCA">
-                <img src="../assets/qris.png" alt="QRIS">
-                <img src="../assets/danapay.png" alt="Dana">
-                <img src="../assets/shopee_pay.png" alt="Shopeepay">
+            </div>
+            <div onclick="selectPayment(this, 'Gopay')">
                 <img src="../assets/go_pay.png" alt="Gopay">
-                <img src="../assets/ovopay.png" alt="OVO">
+            </div>
+            <div onclick="selectPayment(this, 'Dana')">
+                <img src="../assets/danapay.png" alt="Dana">
+            </div>
+            <div onclick="selectPayment(this, 'ShopeePay')">
+                <img src="../assets/shopee_pay.png" alt="ShopeePay">
+            </div>
+        </div>
+        <div class="section-title">QRIS dan Transfer Bank</div>
+        <div class="payment">
+            <div onclick="selectPayment(this, 'QRIS')">
+                <img src="../assets/qris.png" alt="QRIS">
+            </div>
+            <div onclick="selectPayment(this, 'Transfer Bank Jago')">
                 <img src="../assets/jago.png" alt="Jago">
+            </div>
+            <div onclick="selectPayment(this, 'Transfer Bank Seabank')">
                 <img src="../assets/seabank.png" alt="Seabank">
+            </div>
+            <div onclick="selectPayment(this, 'Transfer Bank BCA')">
                 <img src="../assets/bca.png" alt="BCA">
             </div>
         </div>
-    </body>
-    <footer>
-        <div class="footer-container">
-            <div class="contact-us">
-                <h3>Kontak Kami</h3>
-                <a href="https://api.whatsapp.com/send?phone=6281383950505" target="_blank">WhatsApp Admin 1</a>
-                <a href="https://api.whatsapp.com/send?phone=62881010100174" target="_blank">WhatsApp Admin 2</a>
-                <a href="https://t.me/luminver" target="_blank">Telegram</a>
-            </div>
-            <div class="social-media">
-            <a href="https://whatsapp.com/channel/0029Vb68qxMA89MicHexh83R" target="_blank"><img src="../assets/whatsapp.svg" alt="WhatsApp Logo"></a>
-            <a href="https://t.me/+fmdLHovhTpEwZjU1" target="_blank"><img src="../assets/telegram.svg" alt="Facebook Logo"></a>
-            <a href="https://instagram.com/luminver" target="_blank"><img src="../assets/instagram.svg" alt="Instagram Logo"></a>
+        <a href="#" class="button" id="pesanSekarang"><b>Pesan Sekarang</b></a>
+    </div>
+    <div class="payment-methods">
+        <h1>Metode Pembayaran</h1>
+        <p>Pembayaran yang bervariasi memudahkanmu memilih pembayaran yang sesuai.</p>
+        <div class="payment-logos">
+            <img src="../assets/qris.png" alt="QRIS">
+            <img src="../assets/danapay.png" alt="Dana">
+            <img src="../assets/shopee_pay.png" alt="Shopeepay">
+            <img src="../assets/go_pay.png" alt="Gopay">
+            <img src="../assets/ovopay.png" alt="OVO">
+            <img src="../assets/jago.png" alt="Jago">
+            <img src="../assets/seabank.png" alt="Seabank">
+            <img src="../assets/bca.png" alt="BCA">
+            <img src="../assets/qris.png" alt="QRIS">
+            <img src="../assets/danapay.png" alt="Dana">
+            <img src="../assets/shopee_pay.png" alt="Shopeepay">
+            <img src="../assets/go_pay.png" alt="Gopay">
+            <img src="../assets/ovopay.png" alt="OVO">
+            <img src="../assets/jago.png" alt="Jago">
+            <img src="../assets/seabank.png" alt="Seabank">
+            <img src="../assets/bca.png" alt="BCA">
         </div>
-        
+    </div>
+  </body>
+  <footer>
+    <div class="footer-container">
+        <div class="contact-us">
+            <h3>Kontak Kami</h3>
+            <a href="https://api.whatsapp.com/send?phone=6281383950505" target="_blank">WhatsApp Admin 1</a>
+            <a href="https://api.whatsapp.com/send?phone=62881010100174" target="_blank">WhatsApp Admin 2</a>
+            <a href="https://t.me/luminver" target="_blank">Telegram</a>
         </div>
-        <div class="copyright">
-            &copy; <script>document.write(new Date().getFullYear());</script> LUMIN VERTIKAL ABADI
-        </div>
-    </footer>
-    <script src="../script.js"></script>
-        <script>
-        document.getElementById('pesanSekarang').addEventListener('click', function() {
-        const selectedItem = document.querySelector('.selected:not(.payment-methods div)');
-        const userId = document.getElementById('userId').value;
+        <div class="social-media">
+          <a href="https://whatsapp.com/channel/0029Vb68qxMA89MicHexh83R" target="_blank"><img src="../assets/whatsapp.svg" alt="WhatsApp Logo"></a>
+          <a href="https://t.me/+fmdLHovhTpEwZjU1" target="_blank"><img src="../assets/telegram.svg" alt="Facebook Logo"></a>
+          <a href="https://instagram.com/luminver" target="_blank"><img src="../assets/instagram.svg" alt="Instagram Logo"></a>
+      </div>
+      
+    </div>
+    <div class="copyright">
+        &copy; <script>document.write(new Date().getFullYear());</script> LUMIN VERTIKAL ABADI
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+    <script>
+       document.getElementById('pesanSekarang').addEventListener('click', function() {
+    const selectedItem = document.querySelector('.selected:not(.payment-methods div)');
+    const userId = document.getElementById('userId').value;
 
-        if (!selectedItem || !userId || !selectedPayment) {
-            alert("Harap isi User ID, pilih item, dan metode pembayaran.");
-            return;
-        }
+    if (!selectedItem || !userId || !selectedPayment) {
+        alert("Harap isi User ID, pilih item, dan metode pembayaran.");
+        return;
+    }
 
-        const itemName = selectedItem.innerText.split('\n')[0];
-        const itemPrice = selectedItem.innerText.split('\n')[1];
-        const waMessage = `˖ ࣪ ‹. Halo Luminver, saya ingin order item berikut .› ࣪˖\nNama Game: PUBG Mobile\nItem: ${itemName}\nHarga: ${itemPrice}\nUser ID: ${userId}\nPembayaran: ${selectedPayment}\n\n ⚠️ Jangan ubah format teks!`;
+    const itemName = selectedItem.innerText.split('\n')[0];
+    const itemPrice = selectedItem.innerText.split('\n')[1];
+    const waMessage = `˖ ࣪ ‹. Halo Luminver, saya ingin order item berikut .› ࣪˖\nNama Game: PUBG Mobile\nItem: ${itemName}\nHarga: ${itemPrice}\nUser ID: ${userId}\nPembayaran: ${selectedPayment}\n\n ⚠️ Jangan ubah format teks!`;
 
-        const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(waMessage)}`;
-        window.open(waUrl, '_blank');
-    });   
-        </script>
-    </html>    
+    const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(waMessage)}`;
+    window.open(waUrl, '_blank');
+});   
+    </script>
+  </html>    
